@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleTheme } from "../store/themeSlice";
+import {toggleState} from "../store/themeSlice";
 import "./ThemeToggle.css";
 
-const ThemeToggle = () => {
+export default function ThemeToggle() {
     const dispatch = useDispatch();
     const theme = useSelector((state) => state.theme.theme);
 
@@ -15,12 +15,10 @@ const ThemeToggle = () => {
     return (
         <div className="toggle-wrapper">
             <label className="switch">
-                <input type="checkbox" checked={theme === "dark"} onChange={() => dispatch(toggleTheme())} />
+                <input type="checkbox" checked={theme === "dark"} onChange={() => dispatch(toggleState())} />
                 <span className="slider"></span>
             </label>
             <p>{theme === "dark" ? "Тёмная тема" : "Светлая тема"}</p>
         </div>
     );
 };
-
-export default ThemeToggle;
