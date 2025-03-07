@@ -11,20 +11,20 @@ export default function TaskList () {
     }, [dispatch]);
 
     return (
-        <div>
+        <div className="task-list-container">
             <h1>Task List</h1>
             {loading ? (
-                <p>Loading...</p>
+                <p className="loading-text">Loading...</p>
             ) : (
-                <ul>
+                <ul className="task-list">
                     {Array.isArray(items) && items.length > 0 ? (
                         items.map((task) => (
-                            <li key={task.id}>
-                                {task.title} - {task.completed ? "Done" : "Pending"}
+                            <li key={task.id} className={`task-item ${task.completed ? "completed" : ""}`}>
+                                {task.title} - {task.completed ? "✔ Done" : "⏳ Pending"}
                             </li>
                         ))
                     ) : (
-                        <p>No tasks available.</p> // Если задач нет или они не загружены
+                        <p className="no-tasks-text">No tasks available.</p>
                     )}
                 </ul>
             )}
