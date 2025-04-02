@@ -45,7 +45,6 @@ function Registration() {
         }
 
         if (Object.keys(newErrors).length > 0) {
-            // Show error messages as alert
             alert(Object.values(newErrors).join('\n'));
         }
         setErrors(newErrors);
@@ -56,7 +55,6 @@ function Registration() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validate()) {
-            // Logic for sending the form data to the server can go here
             console.log('Form submitted', formData);
         }
     };

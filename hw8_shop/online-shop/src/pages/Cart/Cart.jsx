@@ -39,7 +39,6 @@ const Cart = () => {
         setTotalPrice(calculateTotal());
     }, [cartItems]);
 
-    // Состояния для формы адреса
     const [address, setAddress] = useState({
         country: "",
         state: "",
@@ -98,7 +97,6 @@ const Cart = () => {
                         </div>
                     </div>
 
-                    {/* Блок с адресом доставки */}
                     <div className="cart__info center cart-container">
                         <div className="cart__address">
                             <h2 className="cart__heading">SHIPPING ADDRESS</h2>

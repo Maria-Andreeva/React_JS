@@ -3,7 +3,7 @@ import './SortComponent.css';
 import products from "../data/products";
 
 const SortComponent = ({ productIds, setFilteredProductIds }) => {
-    const [selectedSize, setSelectedSize] = useState([]);  // Состояние для выбранных размеров
+    const [selectedSize, setSelectedSize] = useState([]);
     const [openSections, setOpenSections] = useState({
         trendingNow: false,
         size: false,
@@ -13,20 +13,19 @@ const SortComponent = ({ productIds, setFilteredProductIds }) => {
     const handleSizeFilter = (size) => {
         setSelectedSize(prevSizes => {
             const newSizes = prevSizes.includes(size)
-                ? prevSizes.filter(s => s !== size)  // Убираем размер, если он уже выбран
-                : [...prevSizes, size];  // Добавляем размер
+                ? prevSizes.filter(s => s !== size)
+                : [...prevSizes, size];
             return newSizes;
         });
     };
 
-    // Используем useEffect для фильтрации товаров, когда изменяется selectedSize
     useEffect(() => {
         const filtered = products
             .filter(product => productIds.includes(product.id))
             .filter(product => selectedSize.length === 0 || selectedSize.includes(product.size));
 
         setFilteredProductIds(filtered.map(product => product.id));
-    }, [selectedSize, productIds, setFilteredProductIds]); // Фильтрация будет выполнена при изменении selectedSize
+    }, [selectedSize, productIds, setFilteredProductIds]);
 
     const handleToggle = (section) => {
         setOpenSections(prevState => ({
@@ -40,7 +39,7 @@ const SortComponent = ({ productIds, setFilteredProductIds }) => {
             <details
                 className="sort__details"
                 open={openSections.trendingNow}
-                onClick={(e) => e.stopPropagation() && handleToggle('trendingNow')} // Prevent opening by size selection
+                onClick={(e) => e.stopPropagation() && handleToggle('trendingNow')}
             >
                 <summary className="sort__summary">
                     <span className="sort__heading">TRENDING NOW</span>

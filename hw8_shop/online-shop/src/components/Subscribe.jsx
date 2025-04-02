@@ -9,7 +9,7 @@ function Subscribe() {
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
-        setError(""); // Сбрасываем ошибку при изменении email
+        setError("");
     };
 
     const handleSubscribe = async () => {
@@ -33,7 +33,7 @@ function Subscribe() {
 
             console.log(`Email: ${email} subscribed successfully.`);
             setIsSubscribed(true);
-            setEmail(""); // Очищаем поле ввода после успешной подписки
+            setEmail("");
         } catch (error) {
             setError(error.message);
         }

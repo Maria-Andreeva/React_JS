@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-import "./Sort.css"; // Убедитесь, что стили подключены
+import "./Sort.css";
 
 const Sort = () => {
     const [openDropdown, setOpenDropdown] = useState(null);
     const [selectedSizes, setSelectedSizes] = useState([]);
 
-    // Функция для открытия/закрытия dropdown
     const toggleDropdown = (name) => {
         setOpenDropdown(openDropdown === name ? null : name);
     };
 
-    // Функция для обработки выбора размера
     const handleSizeChange = (size) => {
         setSelectedSizes((prev) =>
             prev.includes(size)
