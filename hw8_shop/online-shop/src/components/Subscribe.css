@@ -1,0 +1,197 @@
+.frame7 {
+    /*width: 100%;*/
+    height: 448px;
+    display: flex;
+    justify-content: space-between;
+    background-size: cover;
+    background-image: url(../assets/img/background_expert.jpeg);
+}
+.subscribe {
+    height: 142px;
+    width: 557px;
+    padding-top: 150px;
+    padding-bottom: 156px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.subscribe__info {
+    height: 225px;
+    width: 360px;
+    padding-top: 97px;
+    padding-bottom: 126px;
+}
+.subscribe__info img {
+    height: 96px;
+    width: 96px;
+    padding-left: 122px;
+    padding-bottom: 30px;
+}
+.subscribe__text {
+    height: 99px;
+    width: 360px;
+    align-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #222224;
+}
+.subscribe__text_right {
+    height: 61px;
+    width: 557px;
+    align-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #222224;
+    padding-bottom: 30px;
+}
+.subscribe__button {
+    height: 49px;
+    width: 356px;
+    align-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #222224;
+}
+.subscribe__button_left {
+    height: 49px;
+    width: 256px;
+}
+.subscribe__button_right {
+    height: 49px;
+    width: 356px;
+    display: flex;
+}
+.subscribe__button_right input {
+    flex-grow: 1;
+    border: none;
+    height: 49px;
+    width: 256px;
+    background-color: rgb(225, 225, 225);
+    outline: none;
+    color: rgb(34, 34, 36);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 22px;
+}
+
+.subscribe__button_right button {
+    height: 49px;
+    width: 100px;
+    background: rgb(241, 109, 127);
+    border: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.messages {
+    margin-top: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    margin-top: 5px;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    margin-top: 5px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .frame7 {
+        height: 693px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 54px;
+    }
+    .subscribe {
+        height: 137px;
+        width: 557px;
+        padding-top: 24px;
+        padding-bottom: 140px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .subscribe__info {
+        padding-top: 64px;
+        padding-bottom: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .subscribe__info img {
+        padding-left: 0;
+    }
+    .subscribe__text {
+        margin-top: 0;
+        margin-bottom: 48px;
+    }
+    .subscribe__text_right {
+        margin-bottom: 27px;
+    }
+
+    .messages {
+         bottom: -220px;
+    }
+}
+
+@media (max-width: 767px) {
+    .frame7 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+    }
+    .subscribe {
+        height: 123px;
+        width: 341px;
+        padding-top: 30px;
+        padding-bottom: 109px;
+    }
+    .subscribe__info {
+        height: 194px;
+        width: 343px;
+        padding-top: 64px;
+        padding-bottom: 30px;
+    }
+    .subscribe__text_right {
+        height: 54px;
+        width: 271px;
+        align-content: center;
+        font-size: 14px;
+    }
+    .subscribe__button_right {
+        height: 47px;
+        width: 341px;
+        padding-top: 22px;
+    }
+    .messages {
+        bottom: -500px;
+    }
+}

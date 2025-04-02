@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+summary {
+    display: block;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    padding-left: calc(50% - 512px);
+    padding-right: calc(50% - 512px);
+}
+.sort-catalog {
+    padding-top: 12px;
+    display: flex;
+    gap: 18px;
+}
+.sort__details {
+    position: relative;
+}
+.sort__summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.sort__heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+}
+.sort__box {
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 7px 30px 11px 9px;
+    position: absolute;
+    left: -9px;
+    top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 79px;
+    min-width: 0;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.sort__check {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6F6E6E;
+}
+.sort__details[open] .sort__box {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    z-index: 50;
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 7px 5px 11px 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 79px;
+}
+
+.sort__details[open] {
+    box-shadow: none;
+}
+
+.sort__heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .sort-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sort-catalog {
+        padding-top: 0;
+        display: flex;
+        gap: 18px;
+    }
+    .sort__summary {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sort__box {
+        background: #FFFFFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        padding: 7px 30px 11px 9px;
+        position: absolute;
+        left: -9px;
+        top: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .sort__heading {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .sort__check {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
